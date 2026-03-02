@@ -159,7 +159,7 @@ def main():
 
     # 2.5 K-Nearest Neighbors (KNN) Regression
     print("\n--- 2.5 K-Nearest Neighbors (KNN) Regression ---")
-    k_values = list(range(1, 31))
+    k_values = list(range(1, 51))
     knn_train_errors = []
     knn_val_errors = []
 
