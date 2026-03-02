@@ -1,0 +1,92 @@
+Loading CIFAR-10 dataset...
+Training set:   3000 samples
+Validation set: 1000 samples
+Test set:       10000 samples
+Feature dim:    3072
+
+============================================================
+LOGISTIC REGRESSION (Softmax)
+============================================================
+  Training with C=1e-05 ... val accuracy = 0.2860
+  Training with C=0.0001 ... val accuracy = 0.3450
+  Training with C=0.001 ... val accuracy = 0.3520
+  Training with C=0.01 ... val accuracy = 0.3150
+  Training with C=0.1 ... val accuracy = 0.2830
+
+  Best C = 0.001  |  Val accuracy = 0.3520
+
+  Saved: cifar10_lr_hyperparam.png
+  Saved: cifar10_lr_confusion.png
+
+============================================================
+LINEAR SVM
+============================================================
+  Training with C=1e-06 ... val accuracy = 0.2990
+  Training with C=1e-05 ... val accuracy = 0.3550
+  Training with C=0.0001 ... val accuracy = 0.3590
+  Training with C=0.001 ... val accuracy = 0.3140
+  Training with C=0.01 ... val accuracy = 0.2590
+
+  Best C = 0.0001  |  Val accuracy = 0.3590
+
+  Saved: cifar10_svm_hyperparam.png
+  Saved: cifar10_svm_confusion.png
+
+============================================================
+K-NEAREST NEIGHBORS
+============================================================
+  Training with k=1 ... val accuracy = 0.2500
+  Training with k=3 ... val accuracy = 0.2560
+  Training with k=5 ... val accuracy = 0.2680
+  Training with k=7 ... val accuracy = 0.2700
+  Training with k=9 ... val accuracy = 0.2660
+  Training with k=11 ... val accuracy = 0.2650
+  Training with k=15 ... val accuracy = 0.2670
+
+  Best k = 7  |  Val accuracy = 0.2700
+
+  Saved: cifar10_knn_hyperparam.png
+  Saved: cifar10_knn_confusion.png
+
+============================================================
+MODEL COMPARISON
+============================================================
+
+  Model                     Best Hyperparam      Val Accuracy   
+  ------------------------------------------------------------
+  Logistic Regression       C=0.001              0.3520
+  Linear SVM                C=0.0001             0.3590
+  KNN                       k=7                  0.2700
+
+  Åö Best model: Linear SVM (val accuracy = 0.3590)
+
+  Åö TEST ACCURACY (Linear SVM): 0.3615
+
+============================================================
+ANALYSIS SUMMARY
+============================================================
+
+1. Model Performance:
+   - Logistic Regression and Linear SVM are both linear models and tend to
+     achieve similar performance on CIFAR-10 (typically ~37-40% accuracy).
+   - KNN can sometimes capture local non-linear patterns but is severely
+     impacted by the curse of dimensionality in 3072-dim space.
+
+2. Effect of High Input Dimensionality:
+   - CIFAR-10 images have 3072 features (32x32x3). In such high-dimensional
+     spaces, distances between points become less meaningful, which hurts
+     distance-based methods like KNN.
+   - Linear models struggle because the raw pixel representation does not
+     provide linearly separable class boundaries.
+
+3. Limitations of Classical Models on Image Data:
+   - Classical models operate on raw pixel features and cannot learn
+     hierarchical or spatial representations the way deep learning models
+     (e.g., CNNs) can.
+   - They are invariant to neither translation nor rotation, meaning small
+     shifts in the image drastically change the feature vector.
+   - Feature engineering (e.g., HOG, PCA) could help, but deep learning
+     approaches fundamentally solve these issues by learning features
+     end-to-end.
+
+All done! Check the generated PNG plots.

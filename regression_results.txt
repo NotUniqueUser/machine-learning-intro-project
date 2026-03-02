@@ -1,0 +1,59 @@
+Fetching Auto MPG dataset...
+
+--- 2.1 Exploratory Data Analysis ---
+Missing values per feature:
+displacement    0
+cylinders       0
+horsepower      6
+weight          0
+acceleration    0
+model_year      0
+origin          0
+mpg             0
+dtype: int64
+
+--- 2.2 Dataset and Preprocessing ---
+Train set size: 234
+Validation set size: 79
+Test set size: 79
+
+--- 2.3 Linear Regression Baseline ---
+Linear Regression (Validation) Performance:
+  MSE:  8.0820
+  RMSE: 2.8429
+  MAE:  2.1966
+  R2:   0.8329
+
+--- 2.4 Polynomial Regression and Model Complexity ---
+Best polynomial degree based on validation MSE: 1
+
+--- 2.5 K-Nearest Neighbors (KNN) Regression ---
+Best k based on validation MSE: 30
+
+--- 2.6 Optimization Behavior (PyTorch) ---
+
+--- 2.7 Model Comparison and Discussion ---
+Evaluating final models on TEST SET:
+
+Linear Regression Test Performance:
+Linear Regression Performance:
+  MSE:  10.6100
+  RMSE: 3.2573
+  MAE:  2.4052
+  R2:   0.7921
+
+Polynomial Regression (Degree 1) Test Performance:
+Polynomial Regression Performance:
+  MSE:  10.6100
+  RMSE: 3.2573
+  MAE:  2.4052
+  R2:   0.7921
+
+KNN Regression (k=30) Test Performance:
+KNN Regression Performance:
+  MSE:  9.6739
+  RMSE: 3.1103
+  MAE:  2.3049
+  R2:   0.8105
+
+Script execution completed. Plots are saved in the 'plots/' directory.
