@@ -21,7 +21,9 @@ from sklearn.preprocessing import StandardScaler
 # 1. Data Loading & Preprocessing
 # ─────────────────────────────────────────────
 
-DATA_DIR = os.path.join(os.path.dirname(__file__), "cifar-10-batches-py")
+DATA_DIR = os.path.join(
+    os.path.dirname(__file__), "intro_to_ai", "datasets", "cifar-10-batches-py"
+)
 plot_dir = "plots"
 os.makedirs(plot_dir, exist_ok=True)
 
