@@ -41,9 +41,27 @@ K-NEAREST NEIGHBORS
   Training with k=7 ... val accuracy = 0.2700
   Training with k=9 ... val accuracy = 0.2660
   Training with k=11 ... val accuracy = 0.2650
+  Training with k=13 ... val accuracy = 0.2680
   Training with k=15 ... val accuracy = 0.2670
+  Training with k=17 ... val accuracy = 0.2600
+  Training with k=19 ... val accuracy = 0.2560
+  Training with k=21 ... val accuracy = 0.2640
+  Training with k=23 ... val accuracy = 0.2700
+  Training with k=25 ... val accuracy = 0.2670
+  Training with k=27 ... val accuracy = 0.2710
+  Training with k=29 ... val accuracy = 0.2740
+  Training with k=31 ... val accuracy = 0.2780
+  Training with k=33 ... val accuracy = 0.2740
+  Training with k=35 ... val accuracy = 0.2700
+  Training with k=37 ... val accuracy = 0.2670
+  Training with k=39 ... val accuracy = 0.2690
+  Training with k=41 ... val accuracy = 0.2670
+  Training with k=43 ... val accuracy = 0.2640
+  Training with k=45 ... val accuracy = 0.2580
+  Training with k=47 ... val accuracy = 0.2540
+  Training with k=49 ... val accuracy = 0.2540
 
-  Best k = 7  |  Val accuracy = 0.2700
+  Best k = 31  |  Val accuracy = 0.2780
 
   Saved: cifar10_knn_hyperparam.png
   Saved: cifar10_knn_confusion.png
@@ -56,11 +74,11 @@ MODEL COMPARISON
   ------------------------------------------------------------
   Logistic Regression       C=0.001              0.3520
   Linear SVM                C=0.0001             0.3590
-  KNN                       k=7                  0.2700
+  KNN                       k=31                 0.2780
 
-  Åö Best model: Linear SVM (val accuracy = 0.3590)
+  ‚òÖ Best model: Linear SVM (val accuracy = 0.3590)
 
-  Åö TEST ACCURACY (Linear SVM): 0.3615
+  ‚òÖ TEST ACCURACY (Linear SVM): 0.3615
 
 ============================================================
 ANALYSIS SUMMARY

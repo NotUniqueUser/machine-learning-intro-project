@@ -246,7 +246,7 @@ print("=" * 60)
 print("K-NEAREST NEIGHBORS")
 print("=" * 60)
 
-knn_k_values = [1, 3, 5, 7, 9, 11, 15]
+knn_k_values = range(1, 50, 2)
 knn_val_accs = []
 
 for k in knn_k_values:
