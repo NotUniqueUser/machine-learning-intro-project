@@ -20,7 +20,7 @@ from sklearn.preprocessing import StandardScaler
 # ─────────────────────────────────────────────
 # 1. Data Loading & Preprocessing
 # ─────────────────────────────────────────────
-
+# HINT: run the notebook (PyTorchNN.ipynb) first to get the dataset
 DATA_DIR = os.path.join(
     os.path.dirname(__file__), "intro_to_ai", "datasets", "cifar-10-batches-py"
 )
